@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>New Tab</title>
+    <link href="nav1/nav1style.css" rel="stylesheet" type="text/css" />
+    <link href="nav2/nav2style.css" rel="stylesheet" type="text/css" />
+    <link href="nav3/nav3style.css" rel="stylesheet" type="text/css" />
+    <link href="nav4/nav3style.css" rel="stylesheet" type="text/css" />
+    <link href="nav5/nav3style.css" rel="stylesheet" type="text/css" />
+    <link href="nav6/nav3style.css" rel="stylesheet" type="text/css" />
+    <style>
+      body {
+        margin: 0;
+        width: 100%;
+        margin: 0 0 0 0;
+        padding: 0 0 0 0;
+        border: 0;
+        display: block;
+      }
+      /*change the layout of the navigation bar for all the screens that have a width less or equal than 500px */
+      @media only screen and (max-width: 500px) {
+        /*shows element in a column*/
+        ul {
+          flex-direction: column;
+        }
+        /* deletes margin on top or bottom of a tag*/
+        li {
+          margin: 0;
+        }
+        /* makes sure that the a tag will take the entire screen*/
+        a {
+          display: block;
+        }
+      }
+      <!-[if lt IE 9]>
+      <script src="https://www.noupe.comdist/html5shiv.js"></script>
+      <![endif]->
+      /* Matches --dark-mode-bg-rbg which tabs seem to claer to by default; any other color causes a flash between first tab paint and NTP extension load
+      See chrome/browser/resouorces/local_ntp/local_ntp_common.css */
+      @media(prefers-color-scheme:dark){body{background-color:rgb(50,54,57);}}
+    </style>
+    <!-- Chrome insists on putting "chrome://newtab" as title if there's no title, instead of putting something useful like a localized "New Tab" there. As a workaround, use a space as title. An empty tab is better than one saying something cryptic. Chrome puts "chrome://newtab" if the title is whitespace too, but it doesn't recognize all the whitespace characters listed at http://en.wikipedia.org/wiki/Space_(punctuation) :-) -->
+  </head>
+  <body>
+
+    <!-- Navigation Bar 1 -->
+    // Navigation Bar 1
+    <div class="nav1" id="nav1">
+      <nav>
+        <ul>
+          <li>
+            <a href="/">Home</a>
+          </li>
+          <li>
+            <a href="/print">Print Design</a>
+          </li>
+          <li>
+            <a href="/web">Web Design</a>
+          </li>
+          <li>
+            <a href="/bio">Bio</a>
+          </li>
+          <li>
+            <a href="/contact">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- Navigation Bar 2 -->
+    // Navigation Bar 2
+    <div class="nav2" id="nav2">
+      <nav>
+        <ul>
+          <li>
+            <!-- link one -->
+            <a href="#aboutMe"> About Me </a>
+          </li>
+          <li>
+            <!-- link two -->
+            <a href="#projects"> Projects </a>
+          </li>
+          <li>
+            <!-- link three -->
+            <a href="#cv"> CV </a>
+          </li>
+          <li>
+            <!-- link four -->
+            <a href="#contacts"> Contacts </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- Navigation Bar 3 -->
+    // Navigation Bar 3
+    <!-- <div class="nav3" id="nav3">
+      <nav class="nav3 navbar">
+        <span class="#nav3 navbar-toggle" id="#nav3 js-navbar-toggle">
+          <i class="fas fa-bars"></i>
+        </span>
+        <a href="#" class="logo">logo</a>
+        <ul class="main-nav" id="js-menu">
+          <li>
+            <a href="#" class="nav-links">Home</a>
+          </li>
+          <li>
+            <a href="#" class="nav-links">Products</a>
+          </li>
+          <li>
+            <a href="#" class="nav-links">About Us</a>
+          </li>
+          <li>
+            <a href="#" class="nav-links">Contact Us</a>
+          </li>
+          <li>
+            <a href="#" class="nav-links">Blog</a>
+          </li>
+        </ul>
+      </nav>
+    </div> -->
+
+    <!-- Navigation Bar 4 -->
+    // Navigation Bar 4
+    // https://codepen.io/piscu/pen/EbWQda?editors=1000
+    <div class="nav4" id="#nav4">
+      <nav id="top-nav">
+        <ul class="">
+          <li><a href="https://google.com" target="_blank">Home</a></li>
+          <li class="dropdown">
+            <a href="#">More <span>&diams;</span> </a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Sub Item</a></li>
+              <li><a href="#">Sub Item</a></li>
+              <li><a href="#">Sub Item</a></li>
+              <li><a href="#">Sub Item</a></li>
+            </ul>
+          </li>
+
+          <li><a href="#">About</a></li>
+
+          <li class="dropdown">
+            <a href="#">More <span>&diams;</span> </a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Sub Item 1</a></li>
+              <li><a href="#">Sub Item 2</a></li>
+              <li class="dropdown"><a href="#">Sub Item 3 <span>&diams;</span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">More Sub Item 1</a></li>
+                  <li class="dropdown"><a href="#">More Sub Item 2 <span>&diams;</span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Other Sub Item 1</a></li>
+                    <li><a href="#">Other Sub Item 2</a></li>
+                    <li><a href="#">Other Sub Item 3</a></li>
+                    <li><a href="#">Other Sub Item 4</a></li>
+                  </ul>
+                </li>
+                  <li><a href="#">More Sub Item 3</a></li>
+                  <li><a href="#">More Sub Item 4</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Sub Item 4</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
